@@ -1,0 +1,25 @@
+/* miniprogram/template/radioTxt.wxss */
+
+.content-paragraph {
+  font-size: 12pt;
+  line-height: 1.5;
+  margin: 12pt 10pt;
+  text-align: justify;
+}
+
+.content-image {
+  display: block;
+  margin: 20pt auto;
+  width: calc(100vw - 20pt);
+}
+
+.content-title {
+  font-size: 18pt;
+  font-weight: bold;
+  color: #222;
+  margin: 28px 6pt;
+}
+
+.content-list-item {
+  padding: 0 1em;
+}

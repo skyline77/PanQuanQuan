@@ -1,0 +1,5 @@
+<!--pages/learn/learn.wxml-->
+<navigator wx:for="{{titles}}" wx:key="item" class="index-item" url="/pages/learnPage/learnPage?index={{index}}"><text
+    wx:if="{{index > 0}}">{{index - 1}}. </text>
+  <text>{{item}}</text>
+</navigator>

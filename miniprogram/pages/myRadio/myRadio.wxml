@@ -1,0 +1,41 @@
+<!--miniprogram/pages/myRadio/myRadio.wxml-->
+
+
+<!-- <view class="body"> -->
+<!-- <view wx:for="{{favorRadios}}">
+    <image src="{{}}"></image>
+  </view> -->
+
+<!-- <view class="h1">已收藏的飞盘小电</view> -->
+<view class="body">
+  <view wx:if="{{radioContents.length > 0}}">
+    <view wx:for="{{radioContents}}" class="image-item">
+      <navigator url="/pages/radio/radio?radioId={{item._id}}">
+        <image class="image" src="{{item.coverImage}}" mode="widthFix"> </image>
+      </navigator>
+
+    </view>
+  </view>
+</view>
+
+
+
+
+<!-- <template name="items">
+    <navigator url="/pages/radio/radio?radioId={{radioId}}" hover-class="navigator-hover">
+      <view class="list-item">
+        <view class="imgs">
+          <image src='/images/sotg1.png' class="in-img" background-size="cover" model="scaleToFill"></image>
+        </view>
+        <view class="infos">
+          <view class="gamename">{{radioId}}</view>
+        </view>
+      </view>
+    </navigator>
+  </template>
+
+
+  <view wx:for="{{favorRadios}}" wx:key="key" class="list">
+    <template is="items" data="{{...item}}" />
+  </view>
+</view> -->

@@ -1,0 +1,38 @@
+<view class='title'>飞盘精神评分表</view>
+
+<form bindsubmit='onSubmit'>
+
+  <view class='gamename'>
+    <input class='gamename input' type="text" placeholder='赛事名' placeholder-style="text-align: center"
+      name='gameName'></input>
+  </view>
+
+  <picker class='date' mode="date" value="{{date}}" start="2019-01-01" name='date' bindchange="bindDateChange">
+    <view>比赛日期：{{date}}</view>
+  </picker>
+
+
+  <view class='versus-flex'>
+    <input class='team-input input' name='myTeam' type='text' placeholder='我方队伍'
+      placeholder-style="text-align: center"></input>
+    <view class='flex-text'>v.s.</view>
+    <input class='team-input input' name='enemyTeam' type='text' placeholder='对方队伍'
+      placeholder-style="text-align: center"></input>
+  </view>
+
+  <sheet-item wx:for="{{rules}}" wx:key="title" title="{{1 + index + '. ' + item.title}}" detail="{{item.detail}}"
+    nameId="{{index}}" bindsliderChange="sliderChange"></sheet-item>
+
+
+
+  <view class="progress-box">
+    <view class='total-score-left'>总分</view>
+    <progress class='total-score-mid'
+      percent="{{ (rules[0].score + rules[1].score + rules[2].score + rules[3].score + rules[4].score) *5}}"
+      stroke-width="3" color="#10AEFF" />
+    <view class='total-score-right'>
+      {{rules[0].score + rules[1].score + rules[2].score + rules[3].score + rules[4].score}}</view>
+  </view>
+  <!-- wx为啥没有computed -->
+  <button class="submit-button" form-type='submit'>提交</button>
+</form>

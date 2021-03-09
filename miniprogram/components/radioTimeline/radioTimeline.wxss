@@ -1,0 +1,161 @@
+/* components/radioTimeline/radioTimeline.wxss */
+
+
+/* @keyframes trun_around {
+  0% {
+    transform: rotate(0deg);
+    transition: transform 0s;
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
+
+.play-pause-outer {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  background-color: rgb(206, 206, 231);
+  margin: 40px auto 25px;
+}
+
+.play-pause-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.time-flex{
+  display: flex;
+}
+
+.time-slider {    
+  flex: 1 0 60%;
+  margin: 0 15px 0 30px;
+  align-self: center;
+}
+
+
+.time-string {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex: 0 0 5em;
+  color: #666;
+  vertical-align: middle;
+}
+
+.nav-outer {
+  display: block;
+  margin: 60px auto 40px;
+  width: 80px;
+  background-color: #8ddbcd;
+  /* background-color: #bce4e4; */
+  padding: 4px 6px 10px;
+
+}
+
+.nav-inner {
+  border-bottom: solid 2px #2fb69d;
+  color: #5e5454;
+  font-size: 60rpx;
+  text-align: center;
+
+}
+
+.item-two {
+  position: relative;
+  width: 100%;
+  min-height: 400rpx;
+  box-sizing: border-box;
+  padding: 0 32rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding-top: 26rpx;
+  padding-bottom: 50rpx;
+  font-size: 24rpx;
+  margin-top: 60rpx;
+}
+
+
+.item-two .timeline:last-child .timeline-content {
+  border: none !important;
+}
+
+
+.timeline {
+  background: #fff;
+  width: 100%;
+
+}
+
+.circle {
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  display: flex;
+  background-color: #2fb69d;
+}
+
+.timeline-content {
+  position: relative;
+
+  margin-left: 7px;
+  border-left: 1px solid #2fb69d;
+  min-height: 80px;
+}
+
+.ss {
+  transform: translate(0, -50%);
+  min-height: 50rpx;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+
+.time {
+  font-size: 10px;
+  width: 70rpx;
+  color: white;
+  width: 100%;
+  padding-left: 55rpx;
+  font-size: 34rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgb(142, 142, 207);
+}
+
+.event {
+  /* width: 100%; */
+  padding-left: 55rpx;
+  padding-top: 15rpx;
+  height: 33rpx;
+  font-size: 34rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgb(142, 142, 207);
+  /* line-height: 33rpx; */
+  margin-top: 5rpx;
+}
+
+.inactive .circle {
+  background-color: #ddd;
+}
+
+.inactive .timeline-content, .exact .timeline-content {
+  border-left-color: #ccc;
+}
+
+.inexact .time{
+  color: #aaa;
+}
+.inexact .event{
+  color: #aaa;
+}

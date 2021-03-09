@@ -1,0 +1,26 @@
+<!--miniprogram/pages/mySheet/mySheet.wxml-->
+
+
+
+<view class="body">
+
+
+  <view wx:for="{{sheets}}" wx:key="key" class="list">
+    <navigator url="/pages/mySheetDetail/mySheetDetail?index={{index}}" hover-class="navigator-hover">
+
+      <view class="list-item">
+        <view class="imgs">
+          <image src='/images/sotg1.png' class="in-img" background-size="cover" model="scaleToFill"></image>
+        </view>
+
+        <view class="infos">
+          <view class="game-name">{{item.gamename}}</view>
+          <view class="team">{{item.myTeam}} \t V.S. \t {{item.enemyTeam}}</view>
+          <view>总分: {{item.totalScore}}</view>
+          <view class="date">{{item.date}}</view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+</view>

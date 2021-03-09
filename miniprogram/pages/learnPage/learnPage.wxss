@@ -1,0 +1,42 @@
+/* pages/learnPage/learnPage.wxss */
+@import "../../template/radioTxt.wxss";
+
+
+
+.navigator-group {
+  border-top: 1px solid #ddd;
+  background-color: white;
+  /* border: solid 1px black; */
+  width: 100vw;
+  display: flex;
+  flex: 0 0 50vw;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  /* border: green 1px solid; */
+}
+
+.navigator-float {
+  position: fixed;
+  top: calc(100vh - 60px);
+  left: 0vw;
+  /* border: yellow 1px solid; */
+}
+
+.navigator-item {
+  /* border: black 1px solid; */
+  width: 30vw;
+  height: 30px;
+  color: rgb(82, 42, 128);
+  margin: 7px 20px 45px;
+  text-align: center;
+  /* ↑修改 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* word-break: keep-all; */
+}
+
+.no-item {
+  color: #888;
+}

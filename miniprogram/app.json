@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/sheet/sheet",
+    "pages/learn/learn",
+    "pages/my/my",
+    "pages/radio/radio",
+    "pages/myRadio/myRadio",
+    "pages/mySheet/mySheet",
+    "pages/mySheetDetail/mySheetDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#6F63FF",
+    "navigationBarTitleText": "盘盘圈",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#328eeb",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/images/navigator/index-white.png",
+        "selectedIconPath": "/images/navigator/index-pink.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/sheet/sheet",
+        "iconPath": "/images/navigator/sheet-white.png",
+        "selectedIconPath": "/images/navigator/sheet-pink.png",
+        "text": "评分"
+      },
+      {
+        "pagePath": "pages/learn/learn",
+        "iconPath": "/images/navigator/learn-white.png",
+        "selectedIconPath": "/images/navigator/learn-pink.png",
+        "text": "规则"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "/images/navigator/my-white.png",
+        "selectedIconPath": "/images/navigator/my-pink.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

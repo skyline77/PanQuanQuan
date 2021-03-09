@@ -1,0 +1,54 @@
+/* miniprogram/pages/mySheetDetail/mySheetDetail.wxss */
+
+.gamename{
+margin-left:25rpx;
+font-weight: 600;
+font-size: 22pt;
+}
+
+.date{
+font-style: normal;
+font-weight: normal;
+font-size: 12pt;
+line-height: 35px;
+margin-left:25rpx;
+color: #9e9e9e;
+}
+
+.team{
+margin-left:25rpx;
+margin-bottom: 20rpx;
+font-family: PingFang SC;
+font-size: 20px;
+line-height: 20px;
+}
+
+.cont{
+  display: flex;
+  margin-left: 25rpx;
+  font-size: 20px;
+}
+.textc{
+  margin-left: 25rpx;
+  color: #6F63FF;
+}
+.comment{
+  margin-left: 2em;
+  margin-right: 25rpx;
+  margin-bottom: 10rpx;
+  background-color: rgba(111, 99, 255, 0.25);
+}
+
+.comment-inner, .said{
+  margin-left: 8rpx;
+  margin-right: 25rpx;
+  font-size: 20px;
+}
+
+.said{
+  color: #6F63FF;
+}
+
+.rule-item{
+  margin: 10px 0;
+}
