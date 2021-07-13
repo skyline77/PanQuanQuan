@@ -28,12 +28,14 @@
   display: flex;
   /* padding: 15px 10px 15px 10px; */
   margin: 15px auto;
+  text-align: center;
+  width: 20rem;
 }
 
 
 .flex-text {
   flex: 0 0 2em;
-  padding: 0 10px;
+  padding: 0 20rpx;
 
 }
 
@@ -53,7 +55,7 @@
 
 .input {
   border-bottom: solid 1px #eee;
-  margin-right: 1em;
+  /* margin-right: 1em; */
 }
 
 
@@ -79,8 +81,12 @@
   flex: 1 0 0;
 }
 
-.submit-button {
-  background-color: #6F63FF;
+.button {
   margin: 20px 0 40px;
-  color: white;
+  color: #fff;
+  background-color: #c77ec4;
+}
+
+.button:active {
+  background-color: #a75ea4;
 }

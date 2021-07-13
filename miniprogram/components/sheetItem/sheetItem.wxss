@@ -11,12 +11,13 @@
   /* border: #aaa solid 1px; */
   flex: 1 0 20px;
   margin: 0;
+  /* margin-left: -6px; */
   /* 这该死的slider有默认margin */
 }
 
 .score-block {
   /* border-top: solid 1px #ddd; */
-  padding: 15px 10px 20px;
+  padding: 15px 10px;
 }
 
 .score-title {

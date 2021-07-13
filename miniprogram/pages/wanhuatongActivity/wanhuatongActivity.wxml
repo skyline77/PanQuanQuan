@@ -1,0 +1,20 @@
+<!--miniprogram/pages/wanhuatongActivity/wanhuatongActivity.wxml-->
+
+
+<view wx:for="{{activities}}" wx:key="key" class="list">
+  <navigator url="/pages/wanhuatongActivityDetail/wanhuatongActivityDetail?index={{index}}"
+    hover-class="navigator-hover">
+
+    <view class="list-item">
+      <view>
+        <image class="image" src='/images/sotg1.png' background-size="cover" model="widthFix"></image>
+      </view>
+
+      <view class="infos">
+        <view class="game-name">{{item.name}}</view>
+        <view class="team">{{item.place[1]}}, {{item.place[2]}}</view>
+        <view class="date">{{item.startDate}} - {{item.endDate}}</view>
+      </view>
+    </view>
+  </navigator>
+</view>

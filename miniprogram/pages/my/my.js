@@ -10,15 +10,10 @@ Page({
   data: {
   },
 
-  navToMySheet() {
-    wx.navigateTo({
-      url: '/pages/mySheet/mySheet',
-    })
+  onShareAppMessage() {
+  },
+  onShareTimeline(){
+
   },
 
-  navToMyRadio() {
-    wx.navigateTo({
-      url: '/pages/myRadio/myRadio',
-    })
-  },
 })

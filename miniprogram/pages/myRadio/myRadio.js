@@ -11,7 +11,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onShow: function () {
+  onShow: async function () {
     this.setData({ // 关键な一步
       radioContents: [],
     })
@@ -26,53 +26,100 @@ Page({
 
 
 
-
-    wx.cloud.callFunction({
-        name: 'add',
-      })
-      .then(fromIdToRadio)
-      .then(fromRadioToContent)
-      .catch(err => {
-        // console.log(err)
-        wx.showToast({
-          title: err,
-          icon: 'error',
-          success: setTimeout(() => {
-            wx.navigateBack({})
-          }, 2000)
-        })
+    try {
+      const userId = await wx.cloud.callFunction({
+        name: 'getOpenId',
       })
 
-    function fromIdToRadio(userId) {
-      return db.collection('favorRadio')
+
+      const res = await db.collection('favorRadio')
         .where({
           _openid: userId.result.OPENID
         })
         .get()
-    }
 
-    function fromRadioToContent(res) {
       if (res.data.length > 0) {
         let radioIds = res.data.map(item => item.radioId)
 
-        return db.collection('radio')
+        const radioContent = await db.collection('radio')
           .where({
             _id: _.in(radioIds)
           })
           .get()
-          .then(res => {
-            that.setData({
-              radioContents: res.data
-            })
-            wx.hideLoading()
-          })
+
+        that.setData({
+          radioContents: radioContent.data
+        })
+        wx.hideLoading()
+
       } else {
-        return Promise.reject('没有收藏的电台')
+        throw new Error('没有收藏的电台')
       }
+
+    } catch (error) {
+
+      // console.log(error)
+
+      wx.showToast({
+        title: '没有收藏的电台',
+        icon: 'error',
+        success: setTimeout(() => {
+          wx.navigateBack({})
+        }, 2000)
+      })
+
+
     }
 
+
+
+    // second version
     // wx.cloud.callFunction({
-    //     name: 'add',
+    //   name: 'openId',
+    // })
+    //   .then(fromIdToRadio)
+    //   .then(fromRadioToContent)
+    //   .catch(err => {
+    //     // console.log(err)
+    //     wx.showToast({
+    //       title: err,
+    //       icon: 'error',
+    //       success: setTimeout(() => {
+    //         wx.navigateBack({})
+    //       }, 2000)
+    //     })
+    //   })
+
+    // function fromIdToRadio(userId) {
+    //   return db.collection('favorRadio')
+    //     .where({
+    //       _openid: userId.result.OPENID
+    //     })
+    //     .get()
+    // }
+
+    // async function fromRadioToContent(res) {
+    //   if (res.data.length > 0) {
+    //     let radioIds = res.data.map(item => item.radioId)
+
+    //     const res_1 = await db.collection('radio')
+    //       .where({
+    //         _id: _.in(radioIds)
+    //       })
+    //       .get() // 用await代替then
+
+    //     that.setData({
+    //       radioContents: res_1.data
+    //     })
+    //     wx.hideLoading()
+    //   } else {
+    //     return Promise.reject('没有收藏的电台')
+    //   }
+    // }
+
+    // first version
+    // wx.cloud.callFunction({
+    //     name: 'openId',
     //   })
     //   .then(fromIdToRadio
     //     // userId => { // 1. 得到用户的openId
@@ -116,5 +163,9 @@ Page({
 
     //   })
 
-  }
+  },
+  onShareAppMessage() {
+  },
+  onShareTimeline() {
+  },
 })

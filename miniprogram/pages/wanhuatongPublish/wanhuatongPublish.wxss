@@ -1,0 +1,65 @@
+/* miniprogram/pages/wanhuatongPublish/wanhuatongPublish.wxss */
+
+
+.title {
+  font-size: 24px;
+  margin: 20px 10px 25px;
+  text-align: center;
+}
+
+.gamename {
+  margin: 15px;
+  text-align: center;
+}
+
+.submit-button {
+  background-color: #6F63FF;
+  margin: 40px 0;
+  color: white;
+}
+
+.item {
+  padding: 25rpx 20rpx;
+  border-bottom: solid 1px #eee;
+  margin: 0 20rpx;
+  /* border-top: solid 1px #ddd; */
+}
+
+.item:first-child {
+  border-top: solid 1px #eee;
+}
+
+
+.text-right,
+.text-left {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.text-left {
+  width: 4.9em;
+}
+
+
+.textarea {
+  height: 20rpx;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-left {
+  flex: 4.9em 0 0;
+}
+
+.flex-right {
+  flex: 1 0 0;
+  /* height: 100rpx; */
+  /* overflow-y: scroll; */
+  min-height: 100rpx;
+}
+
+textarea {
+  height: 100rpx;
+}

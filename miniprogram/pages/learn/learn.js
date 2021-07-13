@@ -18,22 +18,27 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  async onLoad(options) {
     const db = wx.cloud.database()
 
-    db.collection('learn')
+    const titles = await db.collection('learn')
       .doc('titles')
       .get()
-      .then(res => {
-        this.setData({
-          titles: res.data.titles
-        })
-      })
       .catch(err => {
         console.log(err)
       })
 
+    this.setData({
+      titles: titles.data.titles
+    })
 
+
+
+  },
+
+  onShareAppMessage() {
+  },
+  onShareTimeline(){
 
   },
 })

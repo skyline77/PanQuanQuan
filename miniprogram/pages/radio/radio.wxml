@@ -7,8 +7,11 @@
   <template is="radioTxt" data="{{content: radiodata.content}}"></template>
   <!-- 不可以只传入radiodata.content吗  ！不用...radiodata了 -->
 
-  <view wx:if="{{!favored}}" class="favor button" bindtap="favor">收藏</view>
-  <view wx:else class="disfavor button" bindtap="disfavor">取消收藏</view>
+  <button wx:if="{{!favored}}"  type="primary" bindtap="favor"  class="button">收藏</button>
+  <button wx:else   bindtap="disfavor" class="button">取消收藏</button>
+
+  <!-- <view wx:if="{{!favored}}" class="favor button" bindtap="favor">收藏</view>
+  <view wx:else class="disfavor button" bindtap="disfavor">取消收藏</view> -->
 
   <audio-timeline wx:if="{{radiodata.timeline}}" audioUrl="{{radiodata.audioUrl}}" timeline="{{radiodata.timeline}}">
   </audio-timeline>

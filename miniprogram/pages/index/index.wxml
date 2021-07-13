@@ -41,14 +41,68 @@
 </view>
 
 <view class="content">
-  <block wx:for="{{kaleidoscopesCovers}}" wx:key="image">
-    <view class="content-item">
-      <view>
-        <image src="{{item.image}}" style="width:300rpx;height:300rpx;"></image>
-      </view>
-    </view>
+  <navigator class="content-item" url="../wanhuatongPublish/wanhuatongPublish">
+    <image src="../../images/wanhuatong/wanhuatong-b.png" style="width:300rpx;height:300rpx;">
+    </image>
+  </navigator>
+
+  <navigator class="content-item" url="../wanhuatongActivity/wanhuatongActivity?mode=none">
+    <image src="../../images/wanhuatong/wanhuatong-a.png" style="width:300rpx;height:300rpx;">
+    </image>
+  </navigator>
+
+  <block wx:for="{{wanhuatong}}" wx:key="wanhuatongId">
+    <navigator class="content-item" url="{{'../wanhuatong/wanhuatong?wanhuatongId=' + item.wanhuatongId}}">
+
+      <image src="{{item.coverImage}}" style="width:300rpx;height:300rpx;"></image>
+    </navigator>
   </block>
 </view>
 
 
-<!-- <official-account></official-account> -->
+<!-- <official-account></official-account> 一下是equipment-->
+<!-- <view class="picture">
+ <image src="/images/equipment.png"></image>
+</view>
+
+<view class="title">
+<view class="answer-text1">·健康的身体</view>
+</view>
+
+<view class="text1">运动既需要健康的身体，也需要保持身体的健康！</view>
+
+<view class="title">
+<view class="answer-text1">·冷静的头脑</view>
+</view>
+
+<view class="text1">作为团体项目，保持头脑冷静既能更好地发挥出自己的水平，也能更好地把握比赛节奏。</view>
+
+<view class="title">
+<view class="answer-text1">·适合运动的服装</view>
+</view>
+
+<view class="text1">飞盘运动并没有特别的服装要求，适合运动即可。</view>
+
+<view class="title">
+<view class="answer-text1">·适当的防晒措施</view>
+</view>
+
+<view class="text1">飞盘作为室外运动，防晒霜、冰袖、帽子等防晒措施也是必不可少的。</view>
+
+<view class="title">
+<view class="answer-text1">·175g标准极限飞盘</view>
+</view>
+
+<view class="text1">一个标准的极限飞盘质量175g(±3g)，直径274mm(±3mm)，高度32mm(±2mm)。</view>
+
+<view class="title">
+<view class="answer-text1">·飞盘手套</view>
+</view>
+
+<view class="text1">是否佩戴手套因人而异，不过手套既能防滑又能护手。</view>
+
+<view class="title">
+<view class="answer-text1">·足球鞋</view>
+</view>
+
+<view class="text1">飞盘比赛往往在足球场上进行，因此一双好穿的足球鞋也是必不可少的。（一般情况下短钉或碎钉足球鞋即可。）</view> -->

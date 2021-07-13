@@ -14,10 +14,13 @@
   </view> -->
 
   <view class="content">
-    <view wx:for="{{content}}">
+    <block wx:for="{{content}}">
 
-      <view class="content-title" wx:if="{{item.type === 'h1'}}">
-        <view>{{item.h1}}</view>
+      <view wx:if="{{item.type === 'h1'}}" class="content-h1">
+        {{item.h1}}
+      </view>
+      <view wx:if="{{item.type === 'h2'}}" class="content-h2">
+        {{item.h2}}
       </view>
 
       <view class="content-paragraph" wx:elif="{{item.type === 'text'}}"
@@ -62,7 +65,7 @@
 
       </view>
 
-    </view>
+    </block>
   </view>
 
 </template>

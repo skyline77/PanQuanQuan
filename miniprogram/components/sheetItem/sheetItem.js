@@ -14,6 +14,9 @@ Component({
     },
     detail: {
       type: String
+    },
+    lang: {
+      type: String
     }
   },
 

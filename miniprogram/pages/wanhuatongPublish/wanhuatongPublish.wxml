@@ -1,0 +1,64 @@
+<!--miniprogram/pages/wanhuatongPublish/wanhuatongPublish.wxml-->
+<view class='title'>飞盘活动发布表</view>
+
+<form bindsubmit='onSubmit'>
+  <view class="item">
+    <text style="color: red;">*</text>
+    <text class="text-left">活动名称</text>
+    <input class="text-right" type="text" name="name" placeholder="活动名称"></input>
+  </view>
+
+  <view class="item flex">
+    <text style="color: red;">*</text>
+    <text class="text-left flex-left">活动简介</text>
+    <textarea class="text-right flex-right" name="introduction" placeholder="活动简介" disable-default-padding> </textarea>
+  </view>
+
+  <picker class="item" mode="region" bindchange="changePlace" name="place" value="{{place}}">
+    <text style="color: red;">*</text>
+    <text class="text-left">活动地点</text>
+    <text class="text-right">{{place[0]}}, {{place[1]}}, {{place[2]}}</text>
+  </picker>
+
+  <view class="item flex">
+    <text style="color: red;">*</text>
+    <text class="text-left flex-left">详细地点</text>
+    <textarea class="text-right flex-right" name="placeDetail" placeholder="詳しい場所" disable-default-padding></textarea>
+  </view>
+
+
+
+  <view class="item flex">
+    <text style="color: red;">*</text>
+    <text class="text-left">发起人联系方式</text>
+    <textarea class="text-right flex-right" name="contact" placeholder="wx: jjl72975xxx" disable-default-padding></textarea>
+    <!-- &#10; 没法换行小程序是SB吗 -->
+  </view>
+
+  <picker class="item" mode="date" bindchange="changeStartDate" name="startDate" value="{{startDate}}">
+    <text style="color: red;">*</text>
+    <text class="text-left">开始日期</text>
+    <text class="text-right">{{startDate}}</text>
+  </picker>
+
+  <picker class="item" mode="time" bindchange="changeStartTime" name="startTime" value="{{startTime}}">
+    <text style="color: red;">*</text>
+    <text class="text-left">开始时间</text>
+    <text class="text-right">{{startTime}}</text>
+  </picker>
+
+  <picker class="item" mode="date" bindchange="changeEndDate" name="endDate" value="{{endDate}}">
+    <text style="color: red;">*</text>
+    <text class="text-left">结束日期</text>
+    <text class="text-right">{{endDate}}</text>
+  </picker>
+
+  <picker class="item" mode="time" bindchange="changeEndTime" name="endTime" value="{{endTime}}">
+    <text style="color: red;">*</text>
+    <text class="text-left">结束时间</text>
+    <text class="text-right">{{endTime}}</text>
+  </picker>
+
+  <button class="submit-button" type="primary" form-type='submit'>发布</button>
+
+</form>

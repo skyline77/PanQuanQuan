@@ -21,34 +21,19 @@
   color: white;
 }
 
-.hr {
-  height: 20rpx;
-  width: 100%;
-  background-color: #f3f0f0;
-  opacity: 0.2;
-}
-
 .mycontent {
-  display: flex;
-  flex-direction: row;
-  height: 70rpx;
-  background-color: white;
-  margin-left: 30rpx;
-  margin-right: 30rpx;
-  margin-top: 20rpx;
-
+  margin: 0 60rpx;
+  padding: 0 60prx;
+  border-bottom: solid 1px #e8e8e8;
 }
 
 .mecontent {
-  font-size: 120%;
-  margin-left: 30rpx;
-  font-weight: 550;
+  font-size: 14pt;
+  margin: 30rpx 10rpx;
+  font-weight: bold;
 
 }
 
-.hr1 {
-  border: 1px solid #C4C4C4;
-  opacity: 0.2;
-  margin-left: 60rpx;
-  margin-right: 60rpx;
+.navigator-hover {
+  background-color: white;
 }

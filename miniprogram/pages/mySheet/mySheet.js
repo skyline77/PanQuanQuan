@@ -11,39 +11,63 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  async onShow() {
+    console.log('onShow')
     wx.showLoading({
       title: '加载中'
     })
 
-    const db = wx.cloud.database()
-    const _ = db.command
-    wx.cloud.callFunction({ // 通过add函数获取openid（为啥是add这个奇怪的名字）
-        name: 'add',
-      })
-      .then(userId => {
-        db.collection('sheet')
-          .where({
-            _openid: userId.result.OPENID
-          })
-          .get()
-          .then((res) => {
-            // console.log(res)
-            this.setData({
-              sheets: res.data
-            })
-            // console.log(res.data)
+    this.setData({
+      sheets: []
+    })
 
-            // 存入storage
-            wx.setStorage({
-              key: 'sheets',
-              data: JSON.stringify(res.data)
-            })
-            wx.hideLoading()
+    try {
 
-          })
+      const db = wx.cloud.database()
+      const _ = db.command
+      const userId = await wx.cloud.callFunction({ // 通过add函数获取openid（为啥是add这个奇怪的名字）
+        name: 'getOpenId',
       })
 
+      const sheets = await db.collection('sheet')
+        .where({
+          _openid: userId.result.OPENID
+        })
+        .orderBy('updateDate', 'desc')
+        .get()
 
-  }
+      if (sheets.data.length === 0) {
+        wx.showToast({
+          title: '暂无数据',
+          icon: 'error',
+          success: setTimeout(() => {
+            wx.navigateBack({})
+          }, 1500)
+        })
+      }
+
+      else {
+
+        this.setData({
+          sheets: sheets.data
+        })
+
+        // 存入storage
+        wx.setStorage({
+          key: 'sheets',
+          data: JSON.stringify(sheets.data)
+        })
+
+        wx.hideLoading()
+      }
+
+
+    } catch (err) {
+      console.log(err)
+    }
+  },
+  onShareAppMessage() {
+  },
+  onShareTimeline() {
+  },
 })

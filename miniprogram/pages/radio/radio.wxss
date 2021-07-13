@@ -3,6 +3,12 @@
 @import "../../template/radioTxt.wxss";
 
 .button {
+  margin: 20px 0 40px;
+  background-color: #c77ec4! important;
+  color: white;
+}
+
+/* .button {
   display: block;
   width: 80px;
   padding: 5px 8px;
@@ -20,4 +26,4 @@
   background-color: rgb(198, 163, 231);
   border: solid 1px blueviolet;
 
-}
+} */

@@ -7,13 +7,17 @@
     "pages/radio/radio",
     "pages/myRadio/myRadio",
     "pages/mySheet/mySheet",
-    "pages/mySheetDetail/mySheetDetail"
+    "pages/mySheetDetail/mySheetDetail",
+    "pages/wanhuatong/wanhuatong",
+    "pages/wanhuatongActivity/wanhuatongActivity",
+    "pages/wanhuatongPublish/wanhuatongPublish",
+    "pages/wanhuatongActivityDetail/wanhuatongActivityDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#6F63FF",
+    "navigationBarBackgroundColor": "#f4f4f4",
     "navigationBarTitleText": "盘盘圈",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#000",

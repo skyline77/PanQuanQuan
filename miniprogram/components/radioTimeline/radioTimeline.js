@@ -101,7 +101,7 @@ Component({
       this.setData({
         play_pause_src: '/images/pause.png'
       })
-      console.log('audioContext.paused', innerAudioContext.paused)
+      // console.log('audioContext.paused', innerAudioContext.paused)
 
     },
 
@@ -110,7 +110,7 @@ Component({
       this.setData({
         play_pause_src: '/images/play.png'
       })
-      console.log('audioContext.paused', innerAudioContext.paused)
+      // console.log('audioContext.paused', innerAudioContext.paused)
     },
 
     playAudio() {

@@ -1,18 +1,40 @@
 //app.js
 
 
-// 重要！
-// 检查是否已经提交过了 正确实现promise
+
+// 把ID从 wxa18e1b6efe5f741d 改成 wxe2200a785fc62298 就行
 
 
-// sheet页 v.s. 居中
-// myRadio mySheet 当数据大于20条，多次取回
+// 待解决
+
+// sheet 评论对齐 slider
+// 电台感兴趣 显示头像
 
 
+// 已放弃
+// 点击时间线跳转
+// myRadio mySheet 当数据大于20条，多次取回，万花筒下拉刷新 显示三个点提醒下拉
+// wanhuatongPublish 可以以更抽象的方式实现（通过data反映到视图
 
 
 /////////////////////////////////////////////////////////////////////
 // 已解决
+
+// activity 瞬间返回 加了个else
+// error结构化，有些是用户选择的，直接toast。有些是用户不知道的，showModal
+// sheet页 v.s. 居中
+// sheet 的 sameSheet 应该从根本上判断
+// index myRadio radio 正确实现
+
+// 无法上传表单
+// 更改不了日期
+// 新发布的在上面 √
+// my没有则返回 √
+// 删除自己发布的 √
+// 导航栏 高亮区域与认知不符 √ 列表那里没法解决
+// 一些按钮 按下去也应该改变下颜色 √
+// 统一收藏按钮样式 √
+// 分享小程序 √
 
 // 首页的每日手势，在iPad上比例不对
 
@@ -53,11 +75,15 @@
 
 // 统一 radioText和learnPage
 
+// 检查是否已经提交过了 正确实现promise // 重要！
+
+// 区分h1 h2，learnPage用 h1
+
 App({
   onLaunch: function () {
     wx.setInnerAudioOption({
-        obeyMuteSwitch: false
-      })
+      obeyMuteSwitch: false
+    })
       .catch(e => {
         console.log(e)
         console.log('↑不用管他')
