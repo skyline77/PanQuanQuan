@@ -11,7 +11,8 @@
     "pages/wanhuatong/wanhuatong",
     "pages/wanhuatongActivity/wanhuatongActivity",
     "pages/wanhuatongPublish/wanhuatongPublish",
-    "pages/wanhuatongActivityDetail/wanhuatongActivityDetail"
+    "pages/wanhuatongActivityDetail/wanhuatongActivityDetail",
+    "pages/sheetDetail/sheetDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -42,7 +42,8 @@ Page({
 
       if (this.data.mode === 'onlyMine') {
         activities = await db.collection('activity').where({
-          _openid: userId.result.OPENID
+          _openid: userId.result.OPENID,
+          legal: true
         })
 
           .orderBy('updateDate', 'desc')
@@ -50,7 +51,8 @@ Page({
 
       } else if (this.data.mode === 'onlyIntrest') {
         let favorActivity = await db.collection('favorActivity').where({ // 需要更改
-          _openid: userId.result.OPENID
+          _openid: userId.result.OPENID,
+          legal: true
         })
           .get()
 
@@ -64,7 +66,12 @@ Page({
           .get()
       }
       else {
-        activities = await db.collection('activity')
+        activities = await db.collection('activity').where(_.or([{
+          legal: true
+        },{
+          _openid: 'oWnrk5K_DMXeShLm-cnRrdQRO58s',
+        }]))
+        
           .orderBy('updateDate', 'desc')
           .get()
       }

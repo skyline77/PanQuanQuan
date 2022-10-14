@@ -82,11 +82,12 @@ Page({
           endTime: value.endTime,
           // nickName: profile.nickName,
           updateDate: new Date(),
+          legal: false,
         },
       })
 
       wx.showToast({
-        title: '发布成功！',
+        title: '等待审核~',
         duration: 2000,
       })
 

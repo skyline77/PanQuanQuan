@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "sheet-item": "/components/sheetItem/sheetItem"
+  }
+}
