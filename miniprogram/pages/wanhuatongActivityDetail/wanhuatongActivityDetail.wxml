@@ -1,0 +1,68 @@
+<!--miniprogram/pages/wanhuatongActivityDetail/wanhuatongActivityDetail.wxml-->
+
+
+
+<view class='title'>飞盘活动</view>
+
+<view>
+
+  <view class="item">
+    <text class="text-left">活动名称</text>
+    <view class="text-right">{{activity.name}}</view>
+  </view>
+
+  <view class="item">
+    <text class="text-left">活动地点</text>
+    <text class="text-right">{{activity.place[0]}}, {{activity.place[1]}}, {{activity.place[2]}}</text>
+  </view>
+
+  <view class="item flex">
+    <text class="text-left flex-left">详细地点</text>
+    <view class="text-right flex-right">{{activity.placeDetail}}</view>
+  </view>
+
+  <view class="item flex">
+    <text class="text-left flex-left">活动简介</text>
+    <view class="text-right flex-right">{{activity.introduction}}</view>
+  </view>
+
+  <view class="item flex">
+    <text class="text-left">发起人联系方式</text>
+    <view class="text-right flex-right">{{activity.contact}}</view>
+    <!-- &#10; 没法换行小程序是SB吗 -->
+  </view>
+
+  <view class="item">
+    <text class="text-left">开始日期</text>
+    <text class="text-right">{{activity.startDate}}</text>
+  </view>
+
+  <view class="item">
+    <text class="text-left">开始时间</text>
+    <text class="text-right">{{activity.startTime}}</text>
+  </view>
+
+  <view class="item">
+    <text class="text-left">结束日期</text>
+    <text class="text-right">{{activity.endDate}}</text>
+  </view>
+
+  <view class="item">
+    <text class="text-left">结束时间</text>
+    <text class="text-right">{{activity.endTime}}</text>
+  </view>
+
+  <button wx:if="{{userId === activity._openid}}" class="button" type="warn" plain="true" open-type="getUserInfo"
+    bindgetuserinfo="delete">删除</button>
+
+  <button wx:if="{{!isIntrest}}" class="button" type="primary" open-type="getUserInfo"
+    bindgetuserinfo="intrest">感兴趣</button>
+  <button wx:else class="button" type="default" open-type="getUserInfo" bindgetuserinfo="notIntrest">不感兴趣</button>
+
+  <view class="image-list">
+    <image wx:for="{{intrestUser}}" src="{{item.avatarUrl}}" mode="aspectFill" class="intrestImage">
+    </image>
+
+    <open-data  wx:if="{{isIntrest}}" type="userAvatarUrl" class="intrestImage"></open-data>
+  </view>
+</view>

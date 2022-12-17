@@ -1,0 +1,24 @@
+<!--pages/learnPage/learnPage.wxml-->
+
+<import src="../../template/radioTxt.wxml"></import>
+
+
+<!-- 正文 -->
+<template is="radioTxt" data="{{content: content}}"></template>
+
+
+<!-- 导航栏 -->
+<view class="navigator-float">
+  <view class="navigator-group">
+    <view wx:if="{{index-1 >= 0}}" class="navigator-item" bindtap="prevPage">
+      <text>← {{titles[index - 1]}}</text>
+      <!-- <text wx:if="{{index > 1}}">{{index-2}}.</text> -->
+    </view>
+    <view wx:else class="navigator-item no-item">← 没有了</view>
+
+    <view wx:if="{{titles.length > index+1}}" class="navigator-item" bindtap="nextPage">
+      <!-- {{index}}. -->
+      {{titles[index + 1]}} →</view>
+    <view wx:else class="navigator-item no-item">没有了 →</view>
+  </view>
+</view>

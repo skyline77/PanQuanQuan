@@ -1,0 +1,39 @@
+/* miniprogram/pages/mySheetDetail/mySheetDetail.wxss */
+
+page {
+  padding: 0 25rpx;
+  width: 93vw;
+  font-size: 20px;
+}
+
+.gamename {
+  /* margin-left: 25rpx; */
+  margin: 40rpx 0 20rpx;
+  font-weight: bold;
+  font-size: 22pt;
+}
+
+.date {
+  font-size: 14pt;
+  margin: 15rpx 0;
+  color: #9e9e9e;
+}
+
+.comment {
+  margin-left: 1em;
+  background-color: rgba(111, 99, 255, 0.25);
+  padding: 4rpx 6rpx;
+
+}
+
+.purple {
+  color: #6F63FF;
+}
+
+.rule-item {
+  margin: 25rpx 0;
+}
+
+.delete-button {
+  margin: 60rpx 0;
+}

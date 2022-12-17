@@ -1,0 +1,25 @@
+<!--miniprogram/pages/mySheetDetail/mySheetDetail.wxml-->
+<view class="gamename">{{sheet.gameName || '未填写'}}</view>
+<view class="date">{{sheet.date}}</view>
+<view>我方队伍：{{sheet.myTeam || '未填写'}}</view>
+<view>对方队伍：{{sheet.enemyTeam || '未填写'}}</view>
+
+<view>
+  <text>总分：</text>
+  <text class="purple">{{sheet.totalScore}}</text>
+</view>
+
+<view wx:for="{{rules}}" class="rule-item">
+  <view>
+    <text>{{index + 1}}. {{rules[index]}}：</text>
+    <text class="purple">{{sheet.scores[index]}}</text>
+  </view>
+  <view class="comment">
+    <text class="purple">评价：</text>
+    <text>{{sheet.comments[index] || '你没有留下评价'}}
+    </text>
+    <!-- 相当于 sheet.comments[index] === '' ? '你没有留下评价' : sheet.comments[index] -->
+  </view>
+</view>
+
+<button class="delete-button" type="warn" lang="zh_CN" plain="true" bindtap="delete">删除</button>

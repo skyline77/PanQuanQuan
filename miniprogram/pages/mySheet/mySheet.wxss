@@ -1,0 +1,32 @@
+/* miniprogram/pages/mySheet/mySheet.wxss */
+
+page {
+  margin: 25rpx;
+  width: calc(100vw - 50rpx);
+}
+
+.list-item {
+  display: flex;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+
+
+.image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.infos {
+  padding: 20rpx 0 0 20rpx;
+}
+
+.date {
+  font-size: 14px;
+  color: #aaa;
+  margin: 5rpx 0;
+}
+
+.game-name {
+  margin: 10rpx 0;
+}

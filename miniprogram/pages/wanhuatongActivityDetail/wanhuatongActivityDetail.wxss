@@ -1,0 +1,22 @@
+/* miniprogram/pages/wanhuatongActivityDetail/wanhuatongActivityDetail.wxss */
+
+@import '../wanhuatongPublish/wanhuatongPublish.wxss';
+
+.button {
+  margin: 20px 0;
+}
+
+.image-list {
+  max-width: 200px;
+  margin: 20px auto 20px;
+  height: 160rpx;
+  overflow: hidden;
+}
+
+.intrestImage {
+  display: inline-block;
+  height: 60rpx;
+  width: 60rpx;
+  margin: 10rpx;
+  vertical-align: middle;
+}

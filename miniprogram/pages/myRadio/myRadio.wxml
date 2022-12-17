@@ -1,0 +1,13 @@
+<!--miniprogram/pages/myRadio/myRadio.wxml-->
+
+
+<view class="body">
+  <view wx:if="{{radioContents.length > 0}}">
+    <view wx:for="{{radioContents}}" class="image-item">
+      <navigator url="/pages/radio/radio?radioId={{item._id}}">
+        <image class="image" src="{{item.coverImage}}" mode="widthFix"> </image>
+      </navigator>
+
+    </view>
+  </view>
+</view>

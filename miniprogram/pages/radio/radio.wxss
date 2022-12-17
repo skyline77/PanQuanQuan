@@ -1,0 +1,29 @@
+/* miniprogram/pages/radio/radio.wxss */
+
+@import "../../template/radioTxt.wxss";
+
+.button {
+  margin: 20px 0 40px;
+  background-color: #c77ec4! important;
+  color: white;
+}
+
+/* .button {
+  display: block;
+  width: 80px;
+  padding: 5px 8px;
+  border-radius: 15rpx;
+  text-align: center;
+  margin: auto;
+}
+
+.favor {
+  background-color: white;
+  border: solid 1px blueviolet;
+}
+
+.disfavor {
+  background-color: rgb(198, 163, 231);
+  border: solid 1px blueviolet;
+
+} */

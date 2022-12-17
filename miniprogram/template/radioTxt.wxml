@@ -1,0 +1,71 @@
+<!--miniprogram/template/radioTxt.wxml-->
+
+<template name="radioTxt">
+  <!-- <view wx:for="{{content}}">
+    <view class="content-paragraph" wx:if="{{item.type === 'text'}}"
+      >
+      <text>{{item.text}}</text>
+    </view>
+
+    <view wx:elif="{{item.type === 'image'}}">
+      <image class="content-image" src="{{item.image}}" mode="widthFix"></image>
+    </view>
+
+  </view> -->
+
+  <view class="content">
+    <block wx:for="{{content}}">
+
+      <view wx:if="{{item.type === 'h1'}}" class="content-h1">
+        {{item.h1}}
+      </view>
+      <view wx:if="{{item.type === 'h2'}}" class="content-h2">
+        {{item.h2}}
+      </view>
+
+      <view class="content-paragraph" wx:elif="{{item.type === 'text'}}"
+        style="color: {{item.style.color || '#000'}}; text-align: {{item.style.align || 'justify'}}; font-weight: {{item.style.weight || 'normal'}};">
+        {{item.text}}</view>
+
+
+      <view class="content-image" wx:elif="{{item.type === 'image'}}">
+        <image class="content-image" src="{{item.image}}" mode="widthFix"></image>
+      </view>
+
+
+      <view wx:elif="{{item.type === 'ol'}}">
+        <view wx:for="{{item.ol}}" wx:for-index="outerIndex">
+
+          <view wx:if="{{item.type === 'text'}}" class="content-paragraph">{{outerIndex + 1}}. {{item.text}}</view>
+
+          <view wx:elif="{{item.type === 'list'}}">
+            <view wx:for="{{item.list}}" wx:for-index="innerIndex">
+              <view wx:if="{{innerIndex === 0}}" class="content-paragraph">{{outerIndex + 1}}.
+                {{item}}</view>
+              <view wx:else class="content-list-item content-paragraph">● {{item}}</view>
+            </view>
+          </view>
+
+        </view>
+
+      </view>
+
+      <view wx:elif="{{item.type === 'ul'}}">
+        <view wx:for="{{item.ul}}" wx:for-index="outerIndex">
+
+          <view class="content-paragraph" wx:if="{{item.type === 'text'}}">● {{item.text}}</view>
+
+          <view wx:elif="{{item.type === 'list'}}">
+            <view wx:for="{{item.list}}" wx:for-index="innerIndex">
+              <view class="content-list-item">● {{item}}</view>
+            </view>
+          </view>
+
+        </view>
+
+      </view>
+
+    </block>
+  </view>
+
+</template>

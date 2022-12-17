@@ -1,0 +1,18 @@
+<!--components/sheetItem/sheetItem.wxml-->
+<view class='score-block'>
+  <view class='score-title' bindtap="showmodal">{{title}} <icon class="icon-small" type="info_circle" size="14"></icon>
+  </view>
+
+  <view class='score-flex'>
+    <view class='flex-title'><text wx:if="{{lang == 'zh'}}">评分</text><text wx:else>score</text></view>
+    <slider class='flex-slider' min='0' max='4' block-size='20' block-color='#fff' activeColor='#84e' value='2'
+      bindchange='sliderChange' bindchanging='sliderChange' show-value name='{{"slider" + nameId}}' />
+    <!-- bindchanging='sliderChange' 会鬼畜 好像又不会了 -->
+  </view>
+
+  <view class='score-flex'>
+    <view class='flex-title'><text wx:if="{{lang == 'zh'}}">评论</text><text wx:else>commtent</text></view>
+    <textarea wx:if="{{lang == 'zh'}}" class='flex-slider' name='{{"comment" + nameId}}' type='text' placeholder='输入你的评论' auto-height></textarea>
+    <textarea wx:else class='flex-slider' name='{{"comment" + nameId}}' type='text' placeholder='your comment' auto-height></textarea>
+  </view>
+</view>

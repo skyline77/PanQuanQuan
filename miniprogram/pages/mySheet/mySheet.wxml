@@ -1,0 +1,18 @@
+<!--miniprogram/pages/mySheet/mySheet.wxml-->
+
+
+<navigator wx:for="{{sheets}}" wx:key="key" url="/pages/mySheetDetail/mySheetDetail?index={{index}}"
+  hover-class="navigator-hover">
+
+  <view class="list-item">
+    <view>
+      <image class="image" src='/images/sotg1.png' background-size="cover" model="widthFix"></image>
+    </view>
+
+    <view class="infos">
+      <view class="game-name">{{item.gameName}}</view>
+      <view class="team">{{item.myTeam}} V.S. {{item.enemyTeam}}</view>
+      <view class="date">{{item.date}}</view>
+    </view>
+  </view>
+</navigator>

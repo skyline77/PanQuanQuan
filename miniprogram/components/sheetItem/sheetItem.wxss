@@ -1,0 +1,36 @@
+/* components/sheetItem/sheetItem.wxss */
+
+.flex-title {
+  flex: 0 0 2em;
+  color: #555;
+  margin-right: 20px;
+  /* border: #aaa solid 1px;  */
+}
+
+.flex-slider {
+  /* border: #aaa solid 1px; */
+  flex: 1 0 20px;
+  margin: 0;
+  /* margin-left: -6px; */
+  /* 这该死的slider有默认margin */
+}
+
+.score-block {
+  /* border-top: solid 1px #ddd; */
+  padding: 15px 10px;
+}
+
+.score-title {
+  font-size: 16px;
+}
+
+.score-flex {
+  display: flex;
+  justify-content: center;
+  margin: 10px 20px;
+}
+
+/* .icon-small {
+  padding: 0;
+  margin: 0;
+} */

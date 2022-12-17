@@ -1,0 +1,41 @@
+<!--pages/my/my.wxml-->
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/echarts@5.0.2/dist/echarts.min.js"></script> -->
+<view id='myLogin'>
+  <open-data id='myIcon' type="userAvatarUrl"></open-data>
+
+  <open-data id='nickName' type="userNickName" lang="zh_CN"></open-data>
+
+  <!-- 不需要授权 <block wx:if='{{isLogin}}'>
+    <image id='myIcon' src='{{src}}'></image>
+    <text id='nickName'>{{nickName}}</text>
+  </block>
+  <button wx:else open-type='getUserInfo' bindgetuserinfo='getMyInfo' bindtap="fun">未登录，点击登陆</button> -->
+
+</view>
+
+
+
+
+
+<navigator url="/pages/myRadio/myRadio" class="mycontent">
+  <view class="mecontent">收藏的盘圈小电台</view>
+</navigator>
+
+<navigator url="/pages/wanhuatongActivity/wanhuatongActivity?mode=onlyIntrest" class="mycontent">
+  <view class="mecontent">感兴趣的活动</view>
+</navigator>
+
+<navigator url="/pages/wanhuatongActivity/wanhuatongActivity?mode=onlyMine" class="mycontent">
+  <view class="mecontent">我发起的活动</view>
+</navigator>
+
+<navigator url="/pages/mySheet/mySheet" class="mycontent">
+  <view class="mecontent">已填的精神评分表</view>
+</navigator>
+
+
+
+<!-- <view class="mycontent">
+  <view class="mecontent">我的飞盘万花筒</view>
+</view> -->

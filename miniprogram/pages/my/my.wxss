@@ -1,0 +1,39 @@
+/* pages/my/my.wxss */
+
+
+#myLogin {
+  background-color: rgba(111, 99, 255, 0.25);
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#myIcon {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#nickName {
+  color: white;
+}
+
+.mycontent {
+  margin: 0 60rpx;
+  padding: 0 60prx;
+  border-bottom: solid 1px #e8e8e8;
+}
+
+.mecontent {
+  font-size: 14pt;
+  margin: 30rpx 10rpx;
+  font-weight: bold;
+
+}
+
+.navigator-hover {
+  background-color: white;
+}
