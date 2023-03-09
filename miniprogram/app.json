@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/sheet/sheet",
     "pages/learn/learn",
+    "pages/learnPage/learnPage",
     "pages/my/my",
     "pages/radio/radio",
     "pages/myRadio/myRadio",
